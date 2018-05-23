@@ -1,0 +1,7 @@
+.player_button
+{
+	border: 1px solid black;
+	padding: 2px;
+	margin: 2px;
+	display: inline-block;
+}

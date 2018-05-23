@@ -1,0 +1,8 @@
++30sec			=	^[[C
+-30sec			=	^[[D
+-600sec			=	^[[B
++600sec			=	^[[A
++volume			=	+
+-volume			=	-
+pause/resume 	=	p
+End Video			=	q
