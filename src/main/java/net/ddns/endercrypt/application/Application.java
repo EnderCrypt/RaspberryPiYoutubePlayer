@@ -25,6 +25,9 @@ public class Application
 
 	@Option(name = "-p", aliases = { "-port" }, required = false, usage = "The port to host the web view on")
 	private int port;
+	
+	@Option(name = "-r", aliases = { "-resource" }, required = false, usage = "To read resource-folder")
+	private File resourceFolder;
 
 	public void reset()
 	{
@@ -67,5 +70,10 @@ public class Application
 	public File getScript()
 	{
 		return script;
+	}
+	
+	public File getResourceFolder()
+	{
+		return resourceFolder;
 	}
 }
