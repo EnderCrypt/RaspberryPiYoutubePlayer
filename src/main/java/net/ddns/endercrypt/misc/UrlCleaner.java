@@ -36,7 +36,7 @@ public class UrlCleaner
 
 		for (String query : url.getQuery().split("\\&"))
 		{
-			String[] split = query.split("\\&");
+			String[] split = query.split("\\=");
 			String key = split[0];
 			String value = split[1];
 			results.add(new AbstractMap.SimpleEntry<>(key, value));
