@@ -33,6 +33,6 @@ public class YoutubeCleaner implements Cleaner
 
 		String stringQueries = UrlCleaner.toQuery(queries);
 
-		return new URL(url.getProtocol() + "://" + url.getHost() + stringQueries);
+		return new URL(url.getProtocol() + "://" + url.getHost() + url.getPath() + stringQueries);
 	}
 }
