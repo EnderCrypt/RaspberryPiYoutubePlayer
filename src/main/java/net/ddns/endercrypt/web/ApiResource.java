@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -17,6 +16,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import net.ddns.endercrypt.buttons.ButtonManager;
+import net.ddns.endercrypt.misc.UrlCleaner;
 import net.ddns.endercrypt.resource.ResourceException;
 import net.ddns.endercrypt.video.Video;
 import net.ddns.endercrypt.video.VideoManager;
@@ -32,7 +32,7 @@ public class ApiResource
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response video_add(@FormParam("url") String urlString) throws ResourceException, IOException
 	{
-		if (VideoManager.add(new URL(urlString)))
+		if (VideoManager.add(UrlCleaner.clean(new URL(urlString))))
 		{
 			return Response.ok().build();
 		}
